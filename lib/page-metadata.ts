@@ -23,6 +23,6 @@ export function pageMeta({
       title: fullTitle,
       description,
       siteName: SITE_NAME,
-    },
+     images: [{ url: "/og.png", width: 1200, height: 630 }],},
   };
 }
