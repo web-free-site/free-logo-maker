@@ -1,3 +1,4 @@
+import { FAQ_ITEMS } from "@/components/seo/HomeSeoContent";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const jsonLd = {
@@ -15,32 +16,14 @@ const jsonLd = {
     },
     {
       "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Is Free Logo Maker really free?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. The tool runs in your browser, charges nothing, and adds no watermark to downloads.",
-          },
+      mainEntity: FAQ_ITEMS.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: answer,
         },
-        {
-          "@type": "Question",
-          name: "Do I need an account?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No account or login is required. Type your brand name, style it, and download.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can I download SVG?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Choose SVG or PNG from the download menu.",
-          },
-        },
-      ],
+      })),
     },
   ],
 };

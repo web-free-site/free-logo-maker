@@ -22,6 +22,7 @@ import { fontAtom } from "@/lib/statemanager";
 import { useAtom } from "jotai";
 import { AdSlot } from "@/components/ads/AdSlot";
 import { HomeJsonLd } from "@/components/seo/HomeJsonLd";
+import { HomeSeoContent } from "@/components/seo/HomeSeoContent";
 import { SiteChrome } from "@/components/site/SiteChrome";
 import { SITE_NAME } from "@/lib/site";
 import { Boxes, Download, Loader2 } from "lucide-react";
@@ -262,6 +263,7 @@ export default function Home() {
       </div>
       <AdSlot slot="sidebar160x600" className="fixed right-2 top-32 hidden xl:block w-[160px]" />
     </div>
+      <HomeSeoContent />
     </SiteChrome>
   );
 }

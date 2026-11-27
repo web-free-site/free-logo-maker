@@ -9,9 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   ...pageMeta({
-    title: "Free Logo Maker — design and download logos in your browser",
+    title: "Free Logo Maker — text logos online, no sign-up",
     description:
-      "Type your brand name, pick a Google Font, colors, and layout. Download PNG or SVG with no watermark and no sign-up.",
+      "Free Logo Maker: type your brand name, pick Google Fonts, colors, and layout in your browser. Download PNG or SVG with no watermark and no account.",
     path: "/",
   }),
   applicationName: "Free Logo Maker",
